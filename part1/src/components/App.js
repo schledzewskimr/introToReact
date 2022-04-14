@@ -39,17 +39,17 @@ const App = () => {
     )
   }
 
-  const Total = (props) => {
+  const Total = () => {
     return (
-      <p>Number of exercises {props.exercises1 + props.exercises2 + props.exercises3}</p>
+      <p>Number of exercises {exercises1 + exercises2 + exercises3}</p>
     )
   }
 
   return (
     <div>
       <Header course={course} />
-      <Content parts1={part1} exercises1={exercises1} part2={part2} exercises2={exercises2} part3={part3} exercises3={exercises3}/>
-      <Total total={exercises1 + exercises2 + exercises3} />
+      <Content part1={part1} exercises1={exercises1} part2={part2} exercises2={exercises2} part3={part3} exercises3={exercises3}/>
+      <Total total={Total}/>
     </div>
   )
 }
