@@ -124,12 +124,14 @@ const WinVote = (props) => {
   const highestPoints = Math.max(...props.points)
   const highestIndex = props.points.indexOf(highestPoints)
   const winner = props.anecdotes[highestIndex]
-  return (
-    <div>
-      <p>{winner}</p>
-      <p>is everybody's favorite with {highestPoints} votes</p>
-    </div>
-  )
+  if(highestPoints>0){
+    return (
+      <div>
+        <p>{winner}</p>
+        <p>is everybody's favorite with {highestPoints} votes</p>
+      </div>
+    )
+  }
 }
 
 const App = () => {
